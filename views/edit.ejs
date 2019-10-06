@@ -1,0 +1,49 @@
+<% include partials/header.ejs %>
+
+
+<div class="container my-5">
+    <h1 class="text-center" >Edit <%= site.title %> </h1>
+    <div class="row justify-content-center">        
+        <div id="new-form">
+            <form action="/sites/<%=site._id%>?_method=PUT" method="POST">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="title" class="">Title</label>
+                            <input class="form-control" type="text" id="title" name="site[title]" placeholder="Enter site title" value="<%=site.title%>">
+                        </div>
+                        <div class="form-group">
+                            <label for="image" class="">Image URL</label>
+                            <input class="form-control" type="text" id="title" name="site[image]" placeholder="Image URL" value="<%=site.image%>">
+                        </div>                        
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="image" class="">Dive Site Depth</label>
+                            <input class="form-control" type="text" id="title" name="site[depth]" placeholder="Specify the depth of the site" value="<%=site.depth%>">
+                        </div>
+                        <div class="form-group">
+                            <label for="image" class="">Required Diver Level</label>
+                            <input class="form-control" type="text" id="title" name="site[level]" placeholder="Enter required diver level" value="<%=site.level%>">
+                        </div>                    
+                        <div class="form-group">
+                            <label for="image" class="">Distance from our center</label>
+                            <input class="form-control" type="text" id="title" name="site[distance]" placeholder="Please enter the distance" value="<%=site.distance%>">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="form-group">
+                            <label for="image" class="">Site Description</label>
+                            <textarea class="form-control" type="text" id="title" name="site[description]" rows="6" placeholder="Please enter the description of the site"><%=site.description%></textarea>
+                        </div>
+                        <button class="btn btn-success" type="submit">SUBMIT</button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>    
+</div>
+
+
+<% include partials/footer.ejs %>
