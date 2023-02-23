@@ -110,6 +110,8 @@ app.delete("/sites/:id", (req, res) => [
   }),
 ]);
 
-app.listen(3000, () => {
-  console.log("Server started and listening on port 8002");
+const PORT = 8002;
+
+app.listen(PORT, () => {
+  console.log(`Server started and listening on port ${8002}`);
 });
