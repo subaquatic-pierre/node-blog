@@ -1,25 +1,20 @@
 <% include partials/header.ejs %>
 
 <div class="container">
-    <div class="row justify-content-center">   
-        <div class="col-10">
-                <h1>Dive Sites Blog</h1>
-                <% allSites.forEach((site) => { %>
-                    <h2><%= site.title %></h2>
-                    <img src="<%= site.image %>" alt="" width="400px">
-                    <p><%= site.description %></p>
-                    <p><%= site.depth %></p>
-                    <p><%= site.level %></p>
-                    <p><%= site.distance %></p>
-                    <a class="btn btn-primary" href="/sites/<%= site._id %>">More Info</a>
-                <% }) %>
-        </div>
+  <div class="row justify-content-center">
+    <div class="col-10">
+      <h1>Dive Sites Blog</h1>
+      <% allSites.forEach((site) => { %>
+      <h2><%= site.title %></h2>
+      <img src="<%= site.image %>" alt="" width="400px" />
+      <p><%= site.description %></p>
+      <p><%= site.depth %></p>
+      <p><%= site.level %></p>
+      <p><%= site.distance %></p>
+      <a class="btn btn-primary" href="/sites/<%= site._id %>">More Info</a>
+      <% }) %>
     </div>
+  </div>
 </div>
 
-
-
-
 <% include partials/footer.ejs %>
-
-
